@@ -14,12 +14,15 @@ public class OllamaService {
     @Value("${ollama.api.url}")
     private String OLLAMA_URL;
 
+    @Value("${ollama.model}")
+    private String OLLAMA_MODEL;
+
     private final RestTemplate restTemplate = new RestTemplate();
 
     public String askOllama(String prompt) {
         // Build request body
         Map<String, Object> request = new HashMap<>();
-        request.put("model", "gemma2:2b"); // change if you want another model
+        request.put("model", OLLAMA_MODEL);
         request.put("prompt", prompt);
         request.put("stream", false); // 👈 wait for full response
 
