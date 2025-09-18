@@ -107,7 +107,3 @@ curl -X POST http://localhost:8080/chat \
 - Extend `OllamaService` to support multiple models or advanced features (streaming, parameters, etc.).
 - Add exception handling for network or API errors.
 - You can secure the endpoint with Spring Security if needed.
-
-## 📜 License
-
-MIT License (or update to your project’s license)
