@@ -37,8 +37,8 @@ It exposes a REST API for interacting with the model and demonstrates how to str
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/jirv28/Basic-Ollama-Chat-SpringBoot.git
+cd Basic-Ollama-Chat-SpringBoot
 ```
 
 ### 2. Configure environment
