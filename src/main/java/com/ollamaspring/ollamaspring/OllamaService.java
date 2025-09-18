@@ -1,5 +1,6 @@
 package com.ollamaspring.ollamaspring;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -10,7 +11,9 @@ import java.util.Map;
 @Service
 public class OllamaService {
 
-    private static final String OLLAMA_URL = "http://localhost:11434/api/generate";
+    @Value("${ollama.api.url}")
+    private String OLLAMA_URL;
+
     private final RestTemplate restTemplate = new RestTemplate();
 
     public String askOllama(String prompt) {
